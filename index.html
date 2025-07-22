@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -39,7 +40,6 @@
     padding-bottom: 0;
   }
 
-  /* Aquí está el cambio para ocultar scrollbar */
   .carousel {
     display: flex;
     gap: 1.4rem;
@@ -52,7 +52,6 @@
     display: none; /* Chrome, Safari, Edge */
   }
 
-  /* Tamaño por defecto para las imágenes (segundo carrusel) */
   .carousel img {
     width: 176px;
     border-radius: 16px;
@@ -252,21 +251,32 @@
     const closeBtn = document.querySelector('.close-btn');
 
     function setupCarousel(carousel) {
-      const speed = 1.35;
-      carousel.innerHTML += carousel.innerHTML;
-      let scrollLeft = 0;
-      const maxScroll = carousel.scrollWidth / 2;
+      const baseSpeed = 1.35;
 
-      function step() {
-        scrollLeft += speed;
-        if (scrollLeft >= maxScroll) {
-          scrollLeft = 0;
+      const originalContent = carousel.innerHTML;
+      carousel.innerHTML += originalContent;
+
+      requestAnimationFrame(() => {
+        const originalWidth = carousel.scrollWidth / 2;
+        let scrollLeft = 0;
+
+        const speed = window.innerWidth <= 768 ? 0.8 : baseSpeed;
+
+        function step() {
+          scrollLeft += speed;
+
+          if (scrollLeft >= originalWidth) {
+            scrollLeft = 0;
+          }
+
+          carousel.scrollLeft = scrollLeft;
+          requestAnimationFrame(step);
         }
-        carousel.scrollLeft = scrollLeft;
-        requestAnimationFrame(step);
-      }
-      requestAnimationFrame(step);
 
+        requestAnimationFrame(step);
+      });
+
+      // Overlay para ampliar imagen al click
       carousel.addEventListener('click', (e) => {
         if (e.target.tagName === 'IMG') {
           overlayImage.src = e.target.src;
