@@ -1,0 +1,289 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esteban | Channels</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+  body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #2e3234;
+    color: #2d2d2d;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sticky-header {
+    font-family: 'Playfair Display', serif;
+    background: #ffffffcc;
+    backdrop-filter: blur(8px);
+    padding: 0.75rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  main {
+    padding-top: 20px;
+  }
+
+  .carousel-section {
+    padding: 0.8rem;
+  }
+
+  .reduced-height {
+    padding-bottom: 0;
+  }
+
+  /* Aquí está el cambio para ocultar scrollbar */
+  .carousel {
+    display: flex;
+    gap: 1.4rem;
+    overflow-x: auto;
+    width: 100%;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+
+  .carousel img {
+    width: 176px;
+    border-radius: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+  }
+
+  .blurred img {
+    filter: blur(4px);
+    opacity: 0.7;
+  }
+
+  .social-section {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .social-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+    color: #09f911;
+  }
+
+  @media (max-width: 768px) {
+    .social-section h2 {
+      font-size: 2.2rem;
+    }
+  }
+
+  .social-links a {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #09f911;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: transform 0.3s, background 0.3s;
+  }
+
+  .social-links a:hover {
+    background: #0be924;
+    transform: scale(1.05);
+  }
+
+  .icon-links {
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .icon-links img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+    cursor: pointer;
+    filter: brightness(0);
+  }
+
+  .icon-links img:hover {
+    transform: scale(1.15);
+    filter: brightness(0.2);
+  }
+
+  footer {
+    background: #ffffffcc;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.95rem;
+    color: #555;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(8px);
+  }
+
+  .footer-links a {
+    color: #09f911;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  #overlay-image {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 20px;
+    overflow: auto;
+    object-fit: contain;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  </style>
+</head>
+<body>
+  <header class="sticky-header">
+    <h1>Esteban Daddy</h1>
+  </header>
+
+  <main>
+    <section class="carousel-section reduced-height">
+      <div class="carousel auto-carousel">
+        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_124136_040.jpg?raw=true" alt="Slide 1" />
+        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_124136_184.jpg?raw=true" alt="Slide 2" />
+        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_124136_415.jpg?raw=true" alt="Slide 3" />
+        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_124136_650.jpg?raw=true" alt="Slide 4" />
+        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_145821_816.jpg?raw=true" alt="Slide 5" />
+        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_145822_168.jpg?raw=true" alt="Slide 6" />
+        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_145917_973.jpg?raw=true" alt="Slide 7" />
+        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_145918_121.jpg?raw=true" alt="Slide 4" />
+      </div>
+    </section>
+
+    <section class="social-section">
+      <h2>MY EXCLUSIVE CONTENT</h2>
+      <div class="social-links">
+        <a href="https://t.me/+RMhRD6GYCOJiMDVh">Free Telegram Channel</a>
+        <a href="https://t.me/+Ju3ejV-99CdhMmE5">Secondary Telegram Channel</a>
+        <a href="https://t.me/+tZSTY9ukFB4yYmRh">Uncensored Telegram Channel</a>
+        <a href="https://whatsapp.com/channel/0029VbBdLtCL2AU4G27rsK08">My WhatsApp Channel</a>
+        <a href="https://t.me/estebanprivado">Contact me on Telegram for exclusive content</a>
+      </div>
+      <div class="icon-links">
+        <a href="https://x.com/tucuenta" target="_blank" rel="noopener noreferrer">
+          <img src="https://raw.githubusercontent.com/Irvyandl/samiprueba/0f138c95262d539dfdfb217e40e60659aeba5305/assets/x-twitter-brands.svg" alt="X link" />
+        </a>
+        <a href="https://instagram.com/tucuenta" target="_blank" rel="noopener noreferrer">
+          <img src="https://raw.githubusercontent.com/Irvyandl/samiprueba/0f138c95262d539dfdfb217e40e60659aeba5305/assets/instagram-brands-solid.svg" alt="Instagram link" />
+        </a>
+      </div>
+    </section>
+
+    <section class="carousel-section blurred">
+      <div class="carousel auto-carousel blurred">
+        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_124136_032.jpg?raw=true" alt="Slide 1" />
+        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_145822_057.jpg?raw=true" alt="Blurred 2" />
+        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_145917_821.jpg?raw=true" alt="Blurred 3" />
+        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_145918_236.jpg?raw=true" alt="Blurred 4" />
+        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_145918_409.jpg?raw=true" alt="Blurred 5" />
+        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_145918_518.jpg?raw=true" alt="Blurred 6" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Irvin. <em>Ascende Superius – Seek Higher Things</em></p>
+    <div class="footer-links">
+      <a href="https://irvyandl.github.io/PageDesignWithIrvin/" target="_blank" rel="noopener noreferrer">Do you want a website like this? Click here!</a>
+    </div>
+  </footer>
+
+  <div id="overlay">
+    <button class="close-btn">&times;</button>
+    <img id="overlay-image" src="" alt="Full size" />
+  </div>
+
+  <script>
+    const overlay = document.getElementById('overlay');
+    const overlayImage = document.getElementById('overlay-image');
+    const closeBtn = document.querySelector('.close-btn');
+
+    function setupCarousel(carousel) {
+      const speed = 1.35;
+      carousel.innerHTML += carousel.innerHTML;
+      let scrollLeft = 0;
+      const maxScroll = carousel.scrollWidth / 2;
+
+      function step() {
+        scrollLeft += speed;
+        if (scrollLeft >= maxScroll) {
+          scrollLeft = 0;
+        }
+        carousel.scrollLeft = scrollLeft;
+        requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+
+      carousel.addEventListener('click', (e) => {
+        if (e.target.tagName === 'IMG') {
+          overlayImage.src = e.target.src;
+          const isBlurred = e.target.closest('.blurred');
+          overlayImage.style.filter = isBlurred ? 'blur(4px)' : 'none';
+          overlay.style.display = 'flex';
+        }
+      });
+    }
+
+    document.querySelectorAll('.auto-carousel').forEach(setupCarousel);
+
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+      overlayImage.src = '';
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.style.display = 'none';
+        overlayImage.src = '';
+      }
+    });
+  </script>
+</body>
+</html>
