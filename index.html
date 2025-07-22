@@ -52,12 +52,18 @@
     display: none; /* Chrome, Safari, Edge */
   }
 
+  /* Tamaño por defecto para las imágenes (segundo carrusel) */
   .carousel img {
     width: 176px;
     border-radius: 16px;
     border: 2px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
     cursor: pointer;
+  }
+
+  /* Tamaño mayor para imágenes del primer carrusel */
+  .carousel-section.reduced-height .carousel img {
+    width: 220px;
   }
 
   .blurred img {
