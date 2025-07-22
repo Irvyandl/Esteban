@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -45,11 +44,11 @@
     gap: 1.4rem;
     overflow-x: auto;
     width: 100%;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
   }
 
   .carousel::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
+    display: none;
   }
 
   .carousel img {
@@ -60,7 +59,6 @@
     cursor: pointer;
   }
 
-  /* Tamaño mayor para imágenes del primer carrusel */
   .carousel-section.reduced-height .carousel img {
     width: 220px;
   }
@@ -250,25 +248,48 @@
     const overlayImage = document.getElementById('overlay-image');
     const closeBtn = document.querySelector('.close-btn');
 
+    function imagesLoaded(parent, callback) {
+      const imgs = parent.querySelectorAll('img');
+      let loadedCount = 0;
+      const total = imgs.length;
+
+      if (total === 0) {
+        callback();
+        return;
+      }
+
+      imgs.forEach(img => {
+        if (img.complete) {
+          loadedCount++;
+          if (loadedCount === total) callback();
+        } else {
+          img.addEventListener('load', () => {
+            loadedCount++;
+            if (loadedCount === total) callback();
+          });
+          img.addEventListener('error', () => {
+            loadedCount++;
+            if (loadedCount === total) callback();
+          });
+        }
+      });
+    }
+
     function setupCarousel(carousel) {
       const baseSpeed = 1.35;
-
       const originalContent = carousel.innerHTML;
       carousel.innerHTML += originalContent;
 
-      requestAnimationFrame(() => {
+      imagesLoaded(carousel, () => {
         const originalWidth = carousel.scrollWidth / 2;
         let scrollLeft = 0;
-
         const speed = window.innerWidth <= 768 ? 0.8 : baseSpeed;
 
         function step() {
           scrollLeft += speed;
-
           if (scrollLeft >= originalWidth) {
             scrollLeft = 0;
           }
-
           carousel.scrollLeft = scrollLeft;
           requestAnimationFrame(step);
         }
@@ -276,7 +297,6 @@
         requestAnimationFrame(step);
       });
 
-      // Overlay para ampliar imagen al click
       carousel.addEventListener('click', (e) => {
         if (e.target.tagName === 'IMG') {
           overlayImage.src = e.target.src;
