@@ -20,7 +20,7 @@
     font-family: 'Playfair Display', serif;
     background: #ffffffcc;
     backdrop-filter: blur(8px);
-    padding: 0.9375rem;
+    padding: 0.75rem;
     text-align: center;
     box-shadow: 0 2.5px 12.5px rgba(0, 0, 0, 0.08);
     position: sticky;
@@ -29,11 +29,11 @@
   }
 
   main {
-    padding-top: 25px;
+    padding-top: 20px;
   }
 
   .carousel-section {
-    padding: 1rem;
+    padding: 0.8rem;
   }
 
   .reduced-height {
@@ -42,7 +42,7 @@
 
   .carousel {
     display: flex;
-    gap: 1.75rem;
+    gap: 1.4rem;
     overflow-x: auto;
     width: 100%;
     scrollbar-width: none;
@@ -53,15 +53,15 @@
   }
 
   .carousel img {
-    width: 220px;
-    border-radius: 20px;
-    border: 2.5px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 3.75px 7.5px rgba(0, 0, 0, 0.08);
+    width: 176px;
+    border-radius: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
     cursor: pointer;
   }
 
   .carousel-section.reduced-height .carousel img {
-    width: 275px;
+    width: 220px;
   }
 
   .blurred img {
@@ -71,31 +71,31 @@
 
   .social-section {
     text-align: center;
-    padding: 2.5rem 1.25rem;
+    padding: 2rem 1rem;
   }
 
   .social-section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 6.125rem;
-    margin-bottom: 1.875rem;
+    font-size: 4.9rem;
+    margin-bottom: 1.5rem;
     line-height: 1;
     color: #ffffff;
   }
 
   @media (max-width: 768px) {
     .social-section h2 {
-      font-size: 2.75rem;
+      font-size: 2.2rem;
     }
   }
 
   .social-links a {
     display: inline-block;
-    margin: 0.625rem;
-    padding: 0.9375rem 1.875rem;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
     background: #ffffff;
     color: #00b1eb;
     text-decoration: none;
-    border-radius: 37.5px;
+    border-radius: 30px;
     font-weight: 600;
     transition: transform 0.3s, background 0.3s;
   }
@@ -106,10 +106,10 @@
   }
 
   .icon-links {
-    margin-top: 1.5rem;
+    margin-top: 1.2rem;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
@@ -123,8 +123,8 @@
   }
 
   .icon-links img {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     transition: transform 0.3s;
     cursor: pointer;
     filter: brightness(0);
@@ -145,10 +145,10 @@
   footer {
     background: #ffffffcc;
     text-align: center;
-    padding: 2.5rem;
-    font-size: 1.1875rem;
+    padding: 2rem;
+    font-size: 0.95rem;
     color: #555;
-    box-shadow: 0 -2.5px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(8px);
   }
 
@@ -185,26 +185,18 @@
 
   .close-btn {
     position: absolute;
-    top: 1.25rem;
-    right: 1.25rem;
+    top: 1rem;
+    right: 1rem;
     background: #efefef;
     border: none;
     border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    font-size: 1.5rem;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
     cursor: pointer;
-    box-shadow: 0 2.5px 7.5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   }
   </style>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6DPZ3Q1VH2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-6DPZ3Q1VH2');
-  </script>
 </head>
 <body>
   <header class="sticky-header">
