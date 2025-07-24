@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -7,195 +8,195 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
   <style>
-  body {
-    font-family: 'Outfit', sans-serif;
-    background-color: #00b1eb;
-    color: #2d2d2d;
-    margin: 0;
-    padding: 0;
-    font-size: 1.25rem;
-  }
-
-  .sticky-header {
-    font-family: 'Playfair Display', serif;
-    background: #ffffffcc;
-    backdrop-filter: blur(8px);
-    padding: 0.75rem;
-    text-align: center;
-    box-shadow: 0 2.5px 12.5px rgba(0, 0, 0, 0.08);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-
-  main {
-    padding-top: 20px;
-  }
-
-  .carousel-section {
-    padding: 0.8rem;
-  }
-
-  .reduced-height {
-    padding-bottom: 0;
-  }
-
-  .carousel {
-    display: flex;
-    gap: 1.4rem;
-    overflow-x: auto;
-    width: 100%;
-    scrollbar-width: none;
-  }
-
-  .carousel::-webkit-scrollbar {
-    display: none;
-  }
-
-  .carousel img {
-    width: 176px;
-    border-radius: 16px;
-    border: 2px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-  }
-
-  .carousel-section.reduced-height .carousel img {
-    width: 220px;
-  }
-
-  .blurred img {
-    filter: blur(4px);
-    opacity: 0.7;
-  }
-
-  .social-section {
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-
-  .social-section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 4.9rem;
-    margin-bottom: 1.5rem;
-    line-height: 1;
-    color: #ffffff;
-  }
-
-  @media (max-width: 768px) {
-    .social-section h2 {
-      font-size: 2.2rem;
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #00b1eb;
+      color: #2d2d2d;
+      margin: 0;
+      padding: 0;
+      font-size: 1.25rem;
     }
-  }
 
-  .social-links a {
-    display: inline-block;
-    margin: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background: #ffffff;
-    color: #00b1eb;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: transform 0.3s, background 0.3s;
-  }
+    .sticky-header {
+      font-family: 'Playfair Display', serif;
+      background: #ffffffcc;
+      backdrop-filter: blur(8px);
+      padding: 0.75rem;
+      text-align: center;
+      box-shadow: 0 2.5px 12.5px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-  .social-links a:hover {
-    background: #ffffff;
-    transform: scale(1.05);
-  }
+    main {
+      padding-top: 20px;
+    }
 
-  .icon-links {
-    margin-top: 1.2rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-  }
+    .carousel-section {
+      padding: 0.8rem;
+    }
 
-  .icon-links a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-  }
+    .reduced-height {
+      padding-bottom: 0;
+    }
 
-  .icon-links img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.3s;
-    cursor: pointer;
-    filter: brightness(0);
-  }
+    .carousel {
+      display: flex;
+      gap: 1.4rem;
+      overflow-x: auto;
+      width: 100%;
+      scrollbar-width: none;
+    }
 
-  .icon-links img:hover {
-    transform: scale(1.15);
-    filter: brightness(0.2);
-  }
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
 
-  .icon-description {
-    color: #000000;
-    font-size: 1rem;
-    margin-top: 0.4rem;
-    font-weight: 600;
-  }
+    .carousel img {
+      width: 176px;
+      border-radius: 16px;
+      border: 2px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+    }
 
-  footer {
-    background: #ffffffcc;
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.95rem;
-    color: #555;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(8px);
-  }
+    .carousel-section.reduced-height .carousel img {
+      width: 220px;
+    }
 
-  .footer-links a {
-    color: #00b1eb;
-    text-decoration: none;
-    font-weight: bold;
-  }
+    .blurred img {
+      filter: blur(4px);
+      opacity: 0.7;
+    }
 
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
+    .social-section {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
 
-  #overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.5);
-    backdrop-filter: blur(6px);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
+    .social-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.9rem;
+      margin-bottom: 1.5rem;
+      line-height: 1;
+      color: #ffffff;
+    }
 
-  #overlay-image {
-    max-width: 90%;
-    max-height: 85%;
-    border-radius: 20px;
-    overflow: auto;
-    object-fit: contain;
-  }
+    @media (max-width: 768px) {
+      .social-section h2 {
+        font-size: 2.2rem;
+      }
+    }
 
-  .close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: #efefef;
-    border: none;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  }
+    .social-links a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #ffffff;
+      color: #00b1eb;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .social-links a:hover {
+      background: #ffffff;
+      transform: scale(1.05);
+    }
+
+    .icon-links {
+      margin-top: 1.2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .icon-links a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .icon-links img {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.3s;
+      cursor: pointer;
+      filter: brightness(0);
+    }
+
+    .icon-links img:hover {
+      transform: scale(1.15);
+      filter: brightness(0.2);
+    }
+
+    .icon-description {
+      color: #000000;
+      font-size: 1rem;
+      margin-top: 0.4rem;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #ffffffcc;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.95rem;
+      color: #555;
+      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(8px);
+    }
+
+    .footer-links a {
+      color: #00b1eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.5);
+      backdrop-filter: blur(6px);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #overlay-image {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 20px;
+      overflow: auto;
+      object-fit: contain;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #efefef;
+      border: none;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
@@ -213,7 +214,7 @@
         <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_145821_816.jpg?raw=true" alt="Slide 5" />
         <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_145822_168.jpg?raw=true" alt="Slide 6" />
         <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_145917_973.jpg?raw=true" alt="Slide 7" />
-        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_145918_121.jpg?raw=true" alt="Slide 4" />
+        <img src="https://github.com/Irvyandl/Esteban/blob/main/Assets/IMG_20250722_145918_121.jpg?raw=true" alt="Slide 8" />
       </div>
     </section>
 
@@ -225,15 +226,16 @@
         <a href="https://t.me/+tZSTY9ukFB4yYmRh">Telegram (Sin Censura)</a>
         <a href="https://t.me/+NhYnYnnR8xYzNzQx">Canal exclusivo</a>
         <a href="https://whatsapp.com/channel/0029VbBdLtCL2AU4G27rsK08">WhatsApp</a>
-        <a href="https://t.me/estebanprivado">Telegram (Contacto para compras)</a
+        <a href="https://t.me/estebanprivado">Telegram (Contacto para compras)</a>
       </div>
-      <section class="icon-links" style="text-align: center; margin: 2.5rem 0;">
+
+      <section class="icon-links">
         <a href="https://irvyandl.github.io/PageDesignWithIrvin/?utm_source=Seb%27s+Web&utm_medium=Telegram" target="_blank" rel="noopener noreferrer">
-          <img src="https://raw.githubusercontent.com/Irvyandl/Esteban/8c5b6bf40efff787fa204c3ec5423a30e1f804c5/Assets/free_icon_1%20(1).svg" 
-               alt="Crea tu web" />
+          <img src="https://raw.githubusercontent.com/Irvyandl/Esteban/8c5b6bf40efff787fa204c3ec5423a30e1f804c5/Assets/free_icon_1%20(1).svg" alt="Crea tu web" />
           <div class="icon-description">crea tu propia web aquí!</div>
         </a>
       </section>
+    </section>
 
     <section class="carousel-section blurred">
       <div class="carousel auto-carousel blurred">
